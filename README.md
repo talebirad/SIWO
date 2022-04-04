@@ -39,7 +39,9 @@ argparse          1.1
 
 ### Datasets
 
-This repository also contains the synthetic networks we generated via the *LFR benchmark* for our paper's evaluation section. Any code in this repository takes the **edge list** of a graph, in which any line indicates an edge between two nodes separated by *\t*. In addition to the network file, a file containing all **query nodes** should exist. In this file, each line has a node used as the start node to discover its community. Other datasets for larger networks are not included in this repository, refer to this link to get them in the desired format: https://drive.google.com/drive/folders/1bDn-pQ2ahxo5gXBZJp35oo7_wqd4DfQ2?usp=sharing
+This repository also contains the synthetic networks we generated via the *LFR benchmark* for our paper's evaluation section. In this repository, lswl_offline.py and lswl_plus.py take the **edge list** of a graph, in which any line indicates an edge between two nodes separated by *\t*. In addition to the network file, a file containing all **query nodes** should exist. In this file, each line has a node used as the start node to discover its community. 
+
+For big_lswl_online.py, the input file must be of the **adjacency list** form. In short, line i of the input file contains node i as the first entry of the line, and all its neighbors as subsequent entries separated by a delimeter. For nodes without neighbors, the line must be empty. The ground truth file that is used for scoring must be of a specific form too. For reference, check the ground truth files for LFR networks (e.g. Dataset Exp 7.1 table 6/communities_100_8_5_0.15_20.txt). Other datasets for larger networks that should be used by big_lswl_online.py are not included in this repository, refer to this link to get them in the desired format: https://drive.google.com/drive/folders/1bDn-pQ2ahxo5gXBZJp35oo7_wqd4DfQ2?usp=sharing
 
 #### Input and output options
 ```
@@ -110,12 +112,10 @@ Arguments:
                         Output file path (PNG) for local visualization of the ego graph
 ```
 
-The input file must be of a specific form. In short, line i of the input file contains node i as the first entry of the line, and all its neighbors as subsequent entries separated by a delimeter. For nodes without neighbors, the line must be empty.
 
-The ground truth file that is used for scoring must be of a similar form. For reference, check the ground truth files for LFR networks (e.g. Dataset Exp 7.1 table 6/communities_100_8_5_0.15_20.txt)
-
+Sample command:
 ```
-Sample command: python3 big_lswl_online.py -i datasets/karate_adjlist.txt -q 1 -t 100
+python3 big_lswl_online.py -i datasets/karate_adjlist.txt -q 1 -t 100
 ```
 
 

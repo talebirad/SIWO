@@ -67,7 +67,7 @@ The following commands are examples demonstrating how each code in this reposito
 ```
 $ python lswl_offline.py -n karate_edge_list.txt -q karate_query_nodes.txt -s 1
 $ python lswl_plus.py -n karate_edge_list.txt -i y
-$ python lswl_plus_weighted.py -n karate_edge_list.txt -m arithmetic
+$ python lswl_plus_weighted.py -n karate_weighted.txt -m arithmetic
 $ python mod_r.py -n karate_edge_list.txt -q karate_query_nodes.txt
 $ python mod_m.py -n karate_edge_list.txt -q karate_query_nodes.txt
 ```

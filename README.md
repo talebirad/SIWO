@@ -108,7 +108,7 @@ Arguments:
 
 The input file must be of a specific form. In short, line i of the input file contains node i as the first entry of the line, and all its neighbors as subsequent entries separated by a delimeter. For nodes without neighbors, the line must be empty.
 
-The ground truth file that is used for scoring must be of a similar form. For reference, check the ground truth files for LFR networks (e.g. Dataset Exp 7.3.1/communities_100_8_5_0.15_20.txt)
+The ground truth file that is used for scoring must be of a similar form. For reference, check the ground truth files for LFR networks (e.g. Dataset Exp 7.1 table 6/communities_100_8_5_0.15_20.txt)
 
 ```
 Sample command: python3 big_lswl_online.py -i datasets/karate_adjlist.txt -q 1 -t 100

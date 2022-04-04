@@ -54,6 +54,11 @@ for [lswl_offline.py] and [lswl_online.py]:
 for [lswl_plus.py]:
 --outlier         If outliers need to merge into communities (y/n).                  Default is 'y'.
 --overlap         If overlapping communities need to be detected (y/n).              Default is 'n'.
+
+for [lswl_plus_weighted.py]
+--outlier         If outliers need to merge into communities (y/n).                  Default is 'y'.
+--overlap         If overlapping communities need to be detected (y/n).              Default is 'n'.
+--mean_function	  'min', 'arithmetic', 'geometric', or 'harmonic' averaging.         Default is 'geometric'.
 ```
 
 #### Examples
@@ -62,6 +67,7 @@ The following commands are examples demonstrating how each code in this reposito
 ```
 $ python lswl_offline.py -n karate_edge_list.txt -q karate_query_nodes.txt -s 1
 $ python lswl_plus.py -n karate_edge_list.txt -i y
+$ python lswl_plus_weighted.py -n karate_edge_list.txt -m arithmetic
 $ python mod_r.py -n karate_edge_list.txt -q karate_query_nodes.txt
 $ python mod_m.py -n karate_edge_list.txt -q karate_query_nodes.txt
 ```

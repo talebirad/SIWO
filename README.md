@@ -115,7 +115,7 @@ Arguments:
 
 Sample command:
 ```
-python3 big_lswl_online.py -i datasets/karate_adjlist.txt -q 1 -t 100
+python3 big_lswl_online.py -i karate_adjlist.txt -q 1 -t 100
 ```
 
 

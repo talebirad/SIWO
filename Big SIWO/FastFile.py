@@ -6,14 +6,13 @@ class fast_file():
     A utility class designed for efficient reading and interaction with graph data.
 
     Attributes:
-    - lines: Stores the lines of the input file for quick access.
-    - nodes: Dictionary storing nodes and their properties.
-    - edges: Dictionary storing edges and their properties.
+    - line_offset: Stores the locaiton of the linebreaks of the input file for quick access.
 
     Methods:
     - __init__: Initializes the fast_file object, reads the input file, and sets up initial data structures.
-    - get_neighbors: Returns the neighbors of a given node.
-    - strg: Computes the strength of the connection between a node and a community.
+    - getLine: Retrieves the i'th line from the file, utilizing the information about the linebreak locations.
+    - close: Closes the file object
+    
     """
     def __init__(self, inp):
         self.file=open(inp,'rb',8192)
